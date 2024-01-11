@@ -7,7 +7,7 @@ const AllCollections = () => {
   const [isLoading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("https://pacific-scrubland-75606.herokuapp.com/watchCollection")
+    fetch("https://chrono-dial-server.onrender.com/watchCollection")
       .then((res) => res.json())
       .then((data) => {
         setWatches(data);

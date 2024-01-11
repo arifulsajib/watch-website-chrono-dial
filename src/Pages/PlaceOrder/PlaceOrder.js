@@ -18,7 +18,7 @@ const PlaceOrder = () => {
     data.status = "pending";
     data.orderDate = new Date().toLocaleDateString();
 
-    fetch("https://pacific-scrubland-75606.herokuapp.com/placeOrder", {
+    fetch("https://chrono-dial-server.onrender.com/placeOrder", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(data)
@@ -34,7 +34,7 @@ const PlaceOrder = () => {
   };
 
   useEffect(() => {
-    fetch(`https://pacific-scrubland-75606.herokuapp.com/watchCollection/${watchId}`)
+    fetch(`https://chrono-dial-server.onrender.com/watchCollection/${watchId}`)
       .then((res) => res.json())
       .then((data) => setWatch(data));
   }, [watchId]);

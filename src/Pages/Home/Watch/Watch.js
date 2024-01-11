@@ -9,7 +9,7 @@ const Watch = (props) => {
   const handleProductDelete = (id) => {
     const checker = window.confirm("Are you sure to delete?");
     if (checker) {
-      fetch(`https://pacific-scrubland-75606.herokuapp.com/deleteProduct/${id}`, {
+      fetch(`https://chrono-dial-server.onrender.com/deleteProduct/${id}`, {
         method: "DELETE",
         headers: { "content-type": "application/json" }
       })

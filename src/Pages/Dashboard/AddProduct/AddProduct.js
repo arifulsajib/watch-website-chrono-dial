@@ -14,7 +14,7 @@ const AddProduct = () => {
     data.addedBy = user.email;
     console.log(data);
 
-    fetch("https://pacific-scrubland-75606.herokuapp.com/addProduct", {
+    fetch("https://chrono-dial-server.onrender.com/addProduct", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(data)

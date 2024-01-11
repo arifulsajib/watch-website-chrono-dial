@@ -12,7 +12,7 @@ const AddReview = () => {
     data.name = user.displayName;
     data.email = user.email;
 
-    fetch("https://pacific-scrubland-75606.herokuapp.com/addReview", {
+    fetch("https://chrono-dial-server.onrender.com/addReview", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(data)

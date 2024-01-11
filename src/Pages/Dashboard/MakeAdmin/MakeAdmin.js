@@ -4,7 +4,7 @@ const MakeAdmin = () => {
   const [email, setEmail] = useState("");
 
   const handleAdminSubmit = (email) => {
-    const url = `https://pacific-scrubland-75606.herokuapp.com/users/makeAdmin/${email}`;
+    const url = `https://chrono-dial-server.onrender.com/users/makeAdmin/${email}`;
     fetch(url, {
       method: "PUT",
       headers: {

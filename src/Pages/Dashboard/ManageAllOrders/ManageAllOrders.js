@@ -7,7 +7,7 @@ const ManageAllOrders = () => {
   const [isLoading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch(`https://pacific-scrubland-75606.herokuapp.com/allOrders`)
+    fetch(`https://chrono-dial-server.onrender.com/allOrders`)
       .then((res) => res.json())
       .then((data) => {
         setOrders(data);
@@ -18,7 +18,7 @@ const ManageAllOrders = () => {
   const handleDelete = (id) => {
     const checker = window.confirm("Are you sure to delete?");
     if (checker) {
-      fetch(`https://pacific-scrubland-75606.herokuapp.com/deleteOrder/${id}`, {
+      fetch(`https://chrono-dial-server.onrender.com/deleteOrder/${id}`, {
         method: "DELETE",
         headers: { "content-type": "application/json" }
       })
@@ -35,7 +35,7 @@ const ManageAllOrders = () => {
   };
 
   const handleUpdate = (id) => {
-    const url = `https://pacific-scrubland-75606.herokuapp.com/updateOrder/${id}`;
+    const url = `https://chrono-dial-server.onrender.com/updateOrder/${id}`;
     fetch(url, {
       method: "PUT",
       headers: {

@@ -8,7 +8,7 @@ const Reviews = () => {
   const [isLoading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("https://pacific-scrubland-75606.herokuapp.com/reviews")
+    fetch("https://chrono-dial-server.onrender.com/reviews")
       .then((res) => res.json())
       .then((data) => {
         setReviews(data);

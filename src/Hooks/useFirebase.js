@@ -64,7 +64,7 @@ const useFirebase = () => {
       }
 
       // Check Admin
-      fetch(`https://pacific-scrubland-75606.herokuapp.com/users/${user?.email}`)
+      fetch(`https://chrono-dial-server.onrender.com/users/${user?.email}`)
         .then((res) => res.json())
         .then((data) => {
           setAdmin(data.admin);
@@ -93,7 +93,7 @@ const useFirebase = () => {
   const saveToMongo = (email, displayName) => {
     const user = { email, displayName };
 
-    fetch("https://pacific-scrubland-75606.herokuapp.com/users", {
+    fetch("https://chrono-dial-server.onrender.com/users", {
       method: "PUT",
       headers: {
         "content-type": "application/json"
